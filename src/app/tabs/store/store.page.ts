@@ -8,13 +8,19 @@ import { User } from '../../auth/user.model';
   styleUrls: ['./store.page.scss'],
 })
 export class StorePage implements OnInit {
-  loggedUser: User;
+  loggedUser;
   constructor(
     private authSRV: AuthService
-    ) { }
+  ) { }
 
   ngOnInit() {
-    this.loggedUser = this.authSRV.user;
+
+  }
+  ionViewWillEnter() {
+    this.authSRV.getUser()
+      .then(data => {
+        this.loggedUser = data;
+      });
   }
 
 }

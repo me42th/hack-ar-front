@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { QuizService } from './quiz.service';
 import { AuthService } from '../../auth/auth.service';
 import { ProgramaService } from '../programa.service';
-import { User } from '../../auth/user.model';
 import { Quiz } from './quiz.model';
 import { Programa } from '../programa.model';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-quiz',
@@ -12,12 +12,13 @@ import { Programa } from '../programa.model';
   styleUrls: ['./quiz.page.scss'],
 })
 export class QuizPage implements OnInit {
-  
+
   loadedQuizes: Quiz[];
-  loggedUser: User;
+  loggedUserfilms: Observable<any>;
   programaAtual: Programa;
-  next(){
-    
+  loggedUser;
+  next() {
+
     this.loadedQuizes = this.quizSRV.quizes;
   }
   constructor(
@@ -26,7 +27,10 @@ export class QuizPage implements OnInit {
     private programaSRV: ProgramaService) { }
 
   ngOnInit() {
-    this.loggedUser = this.authSRV.user;
+    this.authSRV.getUser()
+      .then(data => {
+        this.loggedUser = data;
+      });
     this.loadedQuizes = this.quizSRV.quizes;
     this.programaAtual = this.programaSRV.programa;
   }

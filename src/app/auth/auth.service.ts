@@ -1,27 +1,37 @@
 import { Injectable, OnInit } from '@angular/core';
 import { User } from './user.model';
+import { HttpClient } from '@angular/common/http';
+import { environment } from '../../environments/environment';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+
+
+
+
+const API_URL = environment.apiUrl;
+
 @Injectable({
   providedIn: 'root'
 })
+
+
 export class AuthService implements OnInit {
-  private _authUser: User  = {
-    id: 'u1',
-    nome: 'David Meth',
-    saldo: 50,
-    transacs: [
-      {
-      id: 't1',
-      idOrigem: 'r1',
-      type: 'resposta',
-      valor: 50
-    }
-    ]
-  };
-  constructor() { }
-  ngOnInit(){
+  currentUser: User;
+  constructor(private http: HttpClient) {
 
   }
-  get user(){
-    return this._authUser;
+
+  ngOnInit() {
   }
+  public getUser() {
+    return new Promise(resolve => {
+      this.http.get(API_URL + '/user/1').subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      });
+
+    });
+  }
+
 }
