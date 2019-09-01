@@ -1,0 +1,48 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="secondary">
+    
+            <ion-button><ion-icon name="contact"></ion-icon>&nbsp;{{loggedUser.nome}}</ion-button>
+    
+          </ion-buttons>
+    
+      <ion-title>CARTEIRA: {{loggedUser.saldo}} AR$</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-sm="8" offset-sm="2" text-center>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-header>
+              <ion-card-title>
+                {{loadedQuiz.programa}}
+              </ion-card-title>
+            </ion-card-header>
+          </ion-card-header>
+
+          <ion-img [src]="'https://picsum.photos/500/200'"></ion-img>
+          <ion-card-content>
+
+            <p>
+             <ion-label><h2> {{loadedQuiz.pergunta}} </h2> </ion-label>
+            </p>
+          </ion-card-content>
+          <ion-grid>
+            <ion-row>
+              <ion-col size="6">
+                <ion-button expand="full" (click)="next()" color="success">
+                  <ion-icon name="checkmark-circle-outline" slot="start"></ion-icon>SIM</ion-button>
+              </ion-col>
+              <ion-col size="6">
+                  <ion-button expand="full" color="danger" (click)="next()">
+                      <ion-icon name="close" slot="start"></ion-icon>NÃO</ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+   </ion-grid>
