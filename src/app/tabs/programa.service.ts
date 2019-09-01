@@ -7,7 +7,8 @@ import { Programa} from './programa.model';
 export class ProgramaService implements OnInit {
   private _programa: Programa = {
     imgURL: 'https://picsum.photos/504/200',
-    name: 'Que Venha o Povo'
+    name: 'Que Venha o Povo',
+    id: 'p1'
   };
   constructor() { }
   ngOnInit(){

@@ -12,7 +12,7 @@ export class QuizService implements OnInit {
     { id:'p4',imgURL: 'https://picsum.photos/303/200', status: true, pergunta: 'VOCÊ É ADULTO?',value: 20 },
     { id:'p5',imgURL: 'https://picsum.photos/304/200', status: true, pergunta: 'VOCÊ ESTÁ NA OUTRA EMISSORA?', value: 15 },
     { id:'p6',imgURL: 'https://picsum.photos/305/200', status: true, pergunta: 'VOCÊ GOSTA DE TRETA?', value: 30 },
-    { id:'p7',imgURL: 'https://picsum.photos/306/200', status: true, pergunta: 'VOCÊ GOSTA DE PRIMEIRA EDIÇÃO?',value: 50 }
+    { id:'p7',imgURL: 'https://picsum.photos/306/200', status: true, pergunta: 'VOCÊ GOSTA DE PRIMEIRA EDIÇÃO?',value: 50}
   ]
 
   get quizes() {
