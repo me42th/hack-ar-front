@@ -10,7 +10,17 @@
     </ion-toolbar>
   </ion-header>
 
-<ion-content>
+<ion-content no-padding>
+    <ion-card >
+        
+        
+        <ion-card-content>
+            <ion-img [src]="programaAtual.imgURL"></ion-img>
+          <h1>
+              <b>Programa:</b> {{programaAtual.name}}
+            </h1>  
+          </ion-card-content>
+      </ion-card>  
   <ion-grid>
     <ion-row *ngFor="let quiz of loadedQuizes">
       <ion-col size="12" size-sm="8" offset-sm="2">
@@ -18,7 +28,7 @@
           <ion-card-header>
            
                 <ion-item >
-                    <ion-thumbnail slot="start"><ion-img [src]="quiz.programaImgURL"></ion-img>
+                    <ion-thumbnail slot="start"><ion-img [src]="quiz.imgURL"></ion-img>
                     </ion-thumbnail>
               <ion-card-title>
                   {{quiz.pergunta}} 

@@ -2,5 +2,6 @@ export interface Quiz {
 
 imgURL: string,
 pergunta: string,
-status: boolean
+status: boolean,
+value: number
 }
