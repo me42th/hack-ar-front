@@ -1,6 +1,6 @@
 export interface Transac {
-    id: string,
-    idOrigem: string,
-    type: string,
+   idPergunta: string, 
+   type: string,
    valor: number,
+   resposta: string
 }

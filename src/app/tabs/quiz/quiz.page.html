@@ -29,24 +29,40 @@
       <ion-col size="12" size-sm="8" offset-sm="2">
         <ion-card >
           <ion-card-header>
-           
-                <ion-item >
-                    <ion-thumbnail slot="start"><ion-img [src]="quiz.imgURL"></ion-img>
-                    </ion-thumbnail>
-              <ion-card-title>
+                       
+                <ion-item lines="none">
+                    <ion-grid no-padding>
+                      <ion-row no-padding>
+                    <ion-col size="4" no-padding>
+                        <ion-img [src]="quiz.imgURL"></ion-img>
+                    
+                    </ion-col>
+                    
+                    <ion-col size="8">
+                    
+                    <ion-card-title>
                   {{quiz.pergunta}} 
               </ion-card-title>
-            </ion-item>
-            </ion-card-header>
+              
+            
+            <ion-card-subtitle>
+                <h3>
+                    <sub>&nbsp;</sub>{{quiz.value}}AR$
+                </h3>
+            </ion-card-subtitle></ion-col>
+          </ion-row>
+          </ion-grid>
+            </ion-item> 
+          </ion-card-header>
 
           <ion-grid no-padding>
             <ion-row>
               <ion-col size="6">
-                <ion-button expand="full" (click)="ok(quiz)" color="success">
+                <ion-button expand="full" (click)="ok(quiz,'sim')" color="success">
                   <ion-icon name="checkmark-circle-outline" slot="start"></ion-icon>SIM</ion-button>
               </ion-col>
               <ion-col size="6">
-                  <ion-button expand="full" color="danger" (click)="not(quiz)">
+                  <ion-button expand="full" color="danger" (click)="ok(quiz,'não')">
                       <ion-icon name="close" slot="start"></ion-icon>NÃO</ion-button>
               </ion-col>
             </ion-row>
