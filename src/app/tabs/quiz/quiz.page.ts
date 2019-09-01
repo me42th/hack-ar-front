@@ -23,16 +23,20 @@ export class QuizPage implements OnInit {
 
     this.loadedQuizes = this.quizSRV.quizes;
   }
-  ok(quiz: Quiz, resp: string) {
+  ok(quiz: Quiz, resp: string, id_programa: string) {
     quiz.status = false;
     let transac: Transac = {
-      idPergunta: 'p1',
+      id_tipoResposta: '1',
+      id_opcao: resp,
+      id_programa: id_programa,
+      id_usuario: this.loggedUser.id,
       type: 'resposta',
       valor: quiz.value,
       resposta: 'resp'
     };
-    this.authSRV.addTransac(transac);
-    this.authSRV.sumValue(quiz.value); this.loggedUser = this.authSRV.user;
+    this.authSRV.addTransac(transac).then(data => {
+      this.updateUser();
+    });
   }
 
   constructor(
@@ -41,12 +45,16 @@ export class QuizPage implements OnInit {
     private programaSRV: ProgramaService) { }
 
   ngOnInit() {
+    this.updateUser();
+    this.loadedQuizes = this.quizSRV.quizes;
+    this.programaAtual = this.programaSRV.programa;
+  }
+
+  private updateUser() {
     this.authSRV.getUser()
       .then(data => {
         this.loggedUser = data;
       });
-    this.loadedQuizes = this.quizSRV.quizes;
-    this.programaAtual = this.programaSRV.programa;
   }
 
 }

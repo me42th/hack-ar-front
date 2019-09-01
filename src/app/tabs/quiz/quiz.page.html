@@ -1,5 +1,7 @@
 <ion-header>
   <ion-toolbar color="primary">
+
+
     <ion-buttons slot="secondary">
 
       <ion-button>
@@ -7,11 +9,18 @@
       </ion-button>
 
     </ion-buttons>
+    <ion-title slot="start">Carteira: {{loggedUser?.saldo}} a$
+      <!-- <ion-thumbnail slot="start">
+        <ion-img src="assets/img/aracash_coin.png"></ion-img>
+      </ion-thumbnail> -->
+    </ion-title>
 
-    <ion-title>CARTEIRA: {{loggedUser?.saldo}} AR$</ion-title>
+
+
+
+    <!-- <img src="assets/img/aracash_coin.png" height='10' width='10'></img> -->
   </ion-toolbar>
 </ion-header>
-
 <ion-content no-padding>
   <ion-card>
 
@@ -35,12 +44,9 @@
               <ion-item lines="none">
                 <ion-grid no-padding>
                   <ion-row no-padding>
-                    <ion-col size="4" no-padding>
-                      <ion-img [src]="quiz.imgURL"></ion-img>
 
-                    </ion-col>
 
-                    <ion-col size="8">
+                    <ion-col size="11">
 
                       <ion-card-title>
                         {{quiz.pergunta}}
@@ -48,9 +54,8 @@
 
 
                       <ion-card-subtitle>
-                        <h3>
-                          <sub>&nbsp;</sub>{{quiz.value}}AR$
-                        </h3>
+
+                        <h3>{{quiz.value}}AR$</h3>
                       </ion-card-subtitle>
                     </ion-col>
                   </ion-row>
@@ -61,12 +66,12 @@
             <ion-grid no-padding>
               <ion-row>
                 <ion-col size="6">
-                  <ion-button expand="full" (click)="ok(quiz,'sim')" color="success">
+                  <ion-button expand="full" (click)="ok(quiz,'1',programaAtual.id)" color="success">
                     <ion-icon name="checkmark-circle-outline" slot="start"></ion-icon>SIM
                   </ion-button>
                 </ion-col>
                 <ion-col size="6">
-                  <ion-button expand="full" color="danger" (click)="ok(quiz,'não')">
+                  <ion-button expand="full" color="danger" (click)="ok(quiz,'2')">
                     <ion-icon name="close" slot="start"></ion-icon>NÃO
                   </ion-button>
                 </ion-col>

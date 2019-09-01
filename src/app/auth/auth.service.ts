@@ -32,16 +32,17 @@ export class AuthService implements OnInit {
     //   ]
   };
 
-  get user() {
-    return { ... this._authUser };
-  }
+  public addTransac(transac: Transac) {
+    return new Promise(resolve => {
+      this.http.post(API_URL + '/responder', {
+        transac
+      }).subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      });
 
-  sumValue(value: number) {
-    this._authUser.saldo += value;
-  }
-
-  addTransac(transac: Transac) {
-    this._authUser.transacs.push(transac);
+    });
   }
 
   public getUser() {

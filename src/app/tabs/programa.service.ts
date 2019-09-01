@@ -1,20 +1,20 @@
 import { Injectable, OnInit } from '@angular/core';
-import { Programa} from './programa.model';
+import { Programa } from './programa.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProgramaService implements OnInit {
   private _programa: Programa = {
-    imgURL: 'https://picsum.photos/504/200',
+    imgURL: 'assets/img/qvp.jpg',
     name: 'Que Venha o Povo',
-    id: 'p1'
+    id: '2'
   };
   constructor() { }
-  ngOnInit(){
-    
+  ngOnInit() {
+
   }
-  get programa(){
+  get programa() {
     return this._programa;
   }
 }

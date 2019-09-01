@@ -1,5 +1,7 @@
 <ion-header>
   <ion-toolbar color="primary">
+
+
     <ion-buttons slot="secondary">
 
       <ion-button>
@@ -7,91 +9,58 @@
       </ion-button>
 
     </ion-buttons>
-    <ion-title>CARTEIRA: {{loggedUser?.saldo}} AR$</ion-title>
+    <ion-title slot="start">Carteira: {{loggedUser?.saldo}} a$
+    </ion-title>
+    <!-- <ion-thumbnail slot="start">
+      <ion-img src="assets/img/aracash_coin.png"></ion-img>
+    </ion-thumbnail> -->
+
+
+
+    <!-- <img src="assets/img/aracash_coin.png" height='10' width='10'></img> -->
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-card>
+
+
+    <ion-card-content>
+      <ion-img src="/assets/img/ARACASH 1.png"></ion-img>
+      <ion-label><br></ion-label>
+
+    </ion-card-content>
+  </ion-card>
   <ion-list approxItemHeight="170px">
-    <ion-item detail button>
-      <ion-thumbnail slot="start">
-        <ion-img src="'https://picsum.photos/500/200'"></ion-img>
-      </ion-thumbnail>
-      <ion-label>
-        <h2>
-          Titulo
-        </h2>
-        <p>
-          Description
-        </p>
-        <div class="details">
-          <ion-icon name="calendar" color="tertiary"></ion-icon>
-          <ion-text color="primary" class="space-left">13/12/1990</ion-text>
-          <span horizontal class="space-left">to</span>
-          <ion-icon name="calendar" color="tertiary"></ion-icon>
-          <ion-text color="primary" class="space-left">13/12/1990</ion-text>
-        </div>
-      </ion-label>
-    </ion-item>
-    <ion-item detail button>
-      <ion-thumbnail slot="start">
-        <ion-img src="'https://picsum.photos/500/200'"></ion-img>
-      </ion-thumbnail>
-      <ion-label>
-        <h2>
-          Titulo
-        </h2>
-        <p>
-          Description
-        </p>
-        <div class="details">
-          <ion-icon name="calendar" color="tertiary"></ion-icon>
-          <ion-text color="primary" class="space-left">13/12/1990</ion-text>
-          <span horizontal class="space-left">to</span>
-          <ion-icon name="calendar" color="tertiary"></ion-icon>
-          <ion-text color="primary" class="space-left">13/12/1990</ion-text>
-        </div>
-      </ion-label>
-    </ion-item>
-    <ion-item detail button>
-      <ion-thumbnail slot="start">
-        <ion-img src="'https://picsum.photos/500/200'"></ion-img>
-      </ion-thumbnail>
-      <ion-label>
-        <h2>
-          Titulo
-        </h2>
-        <p>
-          Description
-        </p>
-        <div class="details">
-          <ion-icon name="calendar" color="tertiary"></ion-icon>
-          <ion-text color="primary" class="space-left">13/12/1990</ion-text>
-          <span horizontal class="space-left">to</span>
-          <ion-icon name="calendar" color="tertiary"></ion-icon>
-          <ion-text color="primary" class="space-left">13/12/1990</ion-text>
-        </div>
-      </ion-label>
-    </ion-item>
-    <ion-item detail button>
-      <ion-thumbnail slot="start">
-        <ion-img src="'https://picsum.photos/500/200'"></ion-img>
-      </ion-thumbnail>
-      <ion-label>
-        <h2>
-          Titulo
-        </h2>
-        <p>
-          Description
-        </p>
-        <div class="details">
-          <ion-icon name="calendar" color="tertiary"></ion-icon>
-          <ion-text color="primary" class="space-left">13/12/1990</ion-text>
-          <span horizontal class="space-left">to</span>
-          <ion-icon name="calendar" color="tertiary"></ion-icon>
-          <ion-text color="primary" class="space-left">13/12/1990</ion-text>
-        </div>
-      </ion-label>
-    </ion-item>
+    <div *ngFor="let product of products">
+
+      <ion-item lines="none">
+        <ion-thumbnail slot="start">
+          <ion-img [src]="'https://picsum.photos/500/20'+product?.id"></ion-img>
+        </ion-thumbnail>
+        <ion-label>
+          <h2>
+            {{product?.titulo}}
+          </h2>
+          <p>
+            {{product?.descricao}}
+          </p>
+          <div class="details">
+            <ion-icon name="cash" color="tertiary"></ion-icon>
+            <ion-text color="primary" class="space-left">{{product?.valor}} a$</ion-text>
+            <ion-text color="primary" class="space-left"> {{product?.quantidade}} un</ion-text>
+          </div>
+        </ion-label>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-col size="12">
+          <ion-button expand="full" size="large" (click)="buy(product?.id)" color="success">
+            COMPRAR
+          </ion-button>
+        </ion-col>
+      </ion-item>
+    </div>
   </ion-list>
 </ion-content>

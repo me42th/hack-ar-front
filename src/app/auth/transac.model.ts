@@ -1,5 +1,8 @@
 export interface Transac {
-   idPergunta: string, 
+   id_tipoResposta: string,
+   id_opcao: string,
+   id_usuario: string,
+   id_programa: string,
    type: string,
    valor: number,
    resposta: string
