@@ -1,4 +1,6 @@
 export interface Quiz {
-programa: string,
-pergunta: string
+
+imgURL: string,
+pergunta: string,
+status: boolean
 }

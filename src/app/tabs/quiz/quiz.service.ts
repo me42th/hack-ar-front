@@ -4,22 +4,22 @@ import { Quiz } from './quiz.model';
 @Injectable({
   providedIn: 'root'
 })
-export class QuizService implements OnInit{
+export class QuizService implements OnInit {
   _quizes: Quiz[] = [
-    {programa: 'QUE VENHA O POVO', pergunta: 'VOCÊ QUER CASAR?'},
-    {programa: 'UNIVERSO AXÉ', pergunta: 'VOCÊ CURTE ROCK?'},
-    {programa: 'BOM DIA E CIA', pergunta: 'VOCÊ É JOVEM AINDA?'},
-    {programa: 'SABADO ANIMADO', pergunta: 'VOCÊ É ADULTO?'},
-    {programa: 'BAHIA NOTICIA', pergunta: 'VOCÊ ESTÁ NA OUTRA EMISSORA?'},
-    {programa: 'ARATU NO AR', pergunta: 'VOCÊ GOSTA DE TRETA?'},
-    {programa: 'ARATU NOTICIA', pergunta: 'VOCÊ GOSTA DE PRIMEIRA EDIÇÃO?'}
+    { imgURL: 'https://picsum.photos/300/200', status: true, pergunta: 'VOCÊ QUER CASAR?' },
+    { imgURL: 'https://picsum.photos/301/200', status: true, pergunta: 'VOCÊ CURTE ROCK?' },
+    { imgURL: 'https://picsum.photos/302/200', status: true, pergunta: 'VOCÊ É JOVEM AINDA?' },
+    { imgURL: 'https://picsum.photos/303/200', status: true, pergunta: 'VOCÊ É ADULTO?' },
+    { imgURL: 'https://picsum.photos/304/200', status: true, pergunta: 'VOCÊ ESTÁ NA OUTRA EMISSORA?' },
+    { imgURL: 'https://picsum.photos/305/200', status: true, pergunta: 'VOCÊ GOSTA DE TRETA?' },
+    { imgURL: 'https://picsum.photos/306/200', status: true, pergunta: 'VOCÊ GOSTA DE PRIMEIRA EDIÇÃO?' }
   ]
 
-  get quizes(){
+  get quizes() {
     return [...this._quizes];
   }
   constructor() { }
-  ngOnInit(){
-    
+  ngOnInit() {
+
   }
 }

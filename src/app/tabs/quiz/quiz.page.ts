@@ -10,12 +10,12 @@ import { Quiz } from './quiz.model';
   styleUrls: ['./quiz.page.scss'],
 })
 export class QuizPage implements OnInit {
-  cont: number = 0;
-  loadedQuiz: Quiz;
+  
+  loadedQuizes: Quiz[];
   loggedUser: User;
   next(){
-    this.cont++;
-    this.loadedQuiz = this.quizSRV.quizes[this.cont];
+    
+    this.loadedQuizes = this.quizSRV.quizes;
   }
   constructor(
     private quizSRV: QuizService,
@@ -23,7 +23,7 @@ export class QuizPage implements OnInit {
 
   ngOnInit() {
     this.loggedUser = this.authSRV.user;
-    this.loadedQuiz = this.quizSRV.quizes[this.cont]; 
+    this.loadedQuizes = this.quizSRV.quizes;
   }
 
 }
