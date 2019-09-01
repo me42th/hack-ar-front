@@ -16,10 +16,12 @@ export class QuizPage implements OnInit {
   loadedQuizes: Quiz[];
   loggedUser: User;
   programaAtual: Programa;
-  next(){
-    
-    this.loadedQuizes = this.quizSRV.quizes;
-  }
+  ok(quiz: Quiz){
+      quiz.status = false;
+    }
+  not(quiz: Quiz){
+    quiz.status = false;
+  }  
   constructor(
     private quizSRV: QuizService,
     private authSRV: AuthService,
