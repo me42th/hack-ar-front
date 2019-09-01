@@ -1,4 +1,5 @@
 export interface Programa {
     imgURL: string,
-    name: string
+    name: string,
+    id: string
 }
