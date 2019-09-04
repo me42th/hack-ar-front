@@ -1,6 +1,8 @@
 ![image](https://user-images.githubusercontent.com/26856017/64269434-41178e80-cf10-11e9-8be2-c7a96bafe409.png)
 
- [![license](https://img.shields.io/github/license/me42th/hack-ar-front)](https://github.com/me42th)
+ [![license](https://img.shields.io/github/license/me42th/hack-ar-front)](https://github.com/me42th) [![languages](https://img.shields.io/github/languages/count/me42th/hack-ar-front)](https://github.com/me42th)
+ 
+ 
  
 ### Coleta de dados gameficada através de moeda virtual e clube de benefícios
 
