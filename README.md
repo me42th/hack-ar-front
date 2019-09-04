@@ -2,6 +2,16 @@
 
 ### Coleta de dados gameficada através de moeda virtual e clube de benefícios
 
+# ARAQUIZ
+
+### Gameficação da Programação da Emissora
+
+O AraQuiz é um modelo de gameficação, e tem o objetivo de criar interação em tempo real com os telespectadores através dos programas da TV Aratu, gerando um contato e interação de mão dupla entre os programas e as pessoas.
+
+Para cada resposta correta e um número X de acessos semanais é atribuído um valor em AraCash na conta do usuário.
+
+
+
 
 #HackatON Aratu 2019 - Front_End
 ##INSTALAÇÃO
