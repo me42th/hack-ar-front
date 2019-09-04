@@ -10,7 +10,9 @@ O AraQuiz é um modelo de gameficação, e tem o objetivo de criar interação e
 
 Para cada resposta correta e um número X de acessos semanais é atribuído um valor em AraCash na conta do usuário.
 
+# CLUBE DE BENEFÍCIOS
 
+O Clube de benefícios serve para fidelizar os telespectadores. Sua lógica consiste em oferecer produtos que podem ser adquiridos através da moeda digital, AraCash, atribuindo uma funcionalidade que permitirá fazer com que as pessoas se sintam motivadas a estarem acompanhando e interagindo durantes as programações da TV Aratu.
 
 
 #HackatON Aratu 2019 - Front_End
