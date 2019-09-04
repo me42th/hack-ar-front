@@ -14,11 +14,15 @@ Para cada resposta correta e um número X de acessos semanais é atribuído um v
 
 O Clube de benefícios serve para fidelizar os telespectadores. Sua lógica consiste em oferecer produtos que podem ser adquiridos através da moeda digital, AraCash, atribuindo uma funcionalidade que permitirá fazer com que as pessoas se sintam motivadas a estarem acompanhando e interagindo durantes as programações da TV Aratu.
 
+# TELAS
 
-#HackatON Aratu 2019 - Front_End
-##INSTALAÇÃO
+![Sem título](https://user-images.githubusercontent.com/26856017/64287702-c6ae3500-cf36-11e9-9dbe-5b3204ab4ce5.png)
 
-###Rodar comando npm install
-###Certificar que o Back End está rodando
-###Configurar os arquivos enviroments e setar as urls de conexão conforme configuração do back end
-###rodar comando ionic serve
+
+# INSTALAÇÃO
+
+**npm install**
+
+## OBSERVAÇÃO
+
+> APENAS O FRONT, CASO QUEIRA VER O SOFTWARE EM FUNCIONAMENTO E TENHA ALGUM PROBLEMA EDITE AS SERVICES REMOVENDO AS REQUISIÇÕES HTTP
