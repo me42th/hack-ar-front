@@ -1,5 +1,7 @@
 ![image](https://user-images.githubusercontent.com/26856017/64269434-41178e80-cf10-11e9-8be2-c7a96bafe409.png)
 
+ [![Awesome](https://img.shields.io/github/license/me42th/hack-ar-front)](https://awesome.re)
+ 
 ### Coleta de dados gameficada através de moeda virtual e clube de benefícios
 
 # ARAQUIZ
