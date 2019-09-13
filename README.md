@@ -32,6 +32,6 @@ O Clube de benefícios serve para fidelizar os telespectadores. Sua lógica cons
 
 > APENAS O FRONT, CASO QUEIRA VER O SOFTWARE EM FUNCIONAMENTO E TENHA ALGUM PROBLEMA EDITE AS SERVICES REMOVENDO AS REQUISIÇÕES HTTP
 
-# ACESSOS || GIT CLONE
+# ACESSOS APÓS PUBLICAÇÃO NO LINKEDIN
 
 ![Screenshot_2019-09-13 me42th hack-ar-front](https://user-images.githubusercontent.com/26856017/64878009-f214dc00-d628-11e9-91c1-3bbc60d6838c.png)
